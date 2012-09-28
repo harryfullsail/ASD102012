@@ -24,7 +24,7 @@ window.addEventListener("DOMContentLoaded", function(){
         var formTag = document.getElementsByTagName("form"), // this is a array of all the from tags.
             selectLi = $('select'),
             makeSelect = document.createElement('select');
-            makeSelect.setAttribute("id", "age");
+            makeSelect.attr("id", "age");
         for(var i=0, j=ageGroup.length; i<j; i++){
             var makeOption = document.createElement('option');
             var optText = ageGroup[i];
