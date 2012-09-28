@@ -8,7 +8,7 @@ window.add("DOMContentLoaded", function(){
     
     //getElementById Function
         function $(x){
-            var theElement = document.getElementById(x);
+            var theElement = document.contenst(x);
             return theElement;
     }
        
