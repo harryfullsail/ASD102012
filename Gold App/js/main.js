@@ -30,9 +30,9 @@ window.addEventListener("DOMContentLoaded", function(){
             var optText = ageGroup[i];
             makeOption.setAttribute("value", optText);
             makeOption.html = optText;
-            makeSelect.appendChild(makeOption);
+            makeSelect.appendTo(makeOption);
         }
-        selectLi.appendChild(makeSelect);
+        selectLi.appendTo(makeSelect);
     }
     
     makeCats();
@@ -93,10 +93,10 @@ window.addEventListener("DOMContentLoaded", function(){
       //Get right image to the category.
     function getImage(catName, makeSubList){
         var imageLi = document.createElement('li');
-        makeSubList.appendChild(imageLi);
+        makeSubList.appendTo(imageLi);
         var newImg = document.createElement('img');
         var setSrc = newImg.setAttribute("src", "images/"+ catName + ".png");
-        imageLi.appendChild(newImg);
+        imageLi.appendTo(newImg);
     }
     
      function storeData(key){
@@ -163,26 +163,26 @@ window.addEventListener("DOMContentLoaded", function(){
         var makeDiv = document.createElement('div');
         makeDiv.setAttribute("id", "items");
         var makeList = document.createElement('ul');
-        makeDiv.appendChild(makeList);
-        document.body.appendChild(makeDiv);
+        makeDiv.appendTo(makeList);
+        document.body.appendTo(makeDiv);
         $('items').style.display = "block";
         for(var i=0, len=localStorage.length; i<len;i++){
             var makeli = document.createElement('li');
             var linksLi = document.createElement('li');
-            makeList.appendChild(makeli);
+            makeList.appendTo(makeli);
             var key = localStorage.key(i);
             var value = localStorage.getItem(key);
             //convert the string from local storage to a vaiue an back to an object using JSON.
             var obj = JSON.parse(value);
             var makeSubList = document.createElement('ul');
-            makeli.appendChild(makeSubList);
+            makeli.appendTo(makeSubList);
             getImage(obj.age[1], makeSubList);
             for(var n in obj){
                 var makeSubli = document.createElement('li');
-                makeSubList.appendChild(makeSubli);
+                makeSubList.appendTo(makeSubli);
                 var optSubText = obj[n][0]+" "+obj[n][1];
                 makeSubli.html = optSubText;
-                makeSubList.appendChild(linksLi);
+                makeSubList.appendTo(linksLi);
             }
             makeItemLinks(localStorage.key(i), linksLi); //Creat our edit and delete buttons link for our item in local storage.
         }
@@ -206,11 +206,11 @@ window.addEventListener("DOMContentLoaded", function(){
         var editText = "Edit Information";
         editLink.addEventListener("click", editItem);
         editLink.html = editText;
-        linksLi.appendChild(editLink);
+        linksLi.appendTo(editLink);
         
         //add a line break
         var breakTag = document.createElement('br');
-        linksLi.appendChild(breakTag);
+        linksLi.appendTo(breakTag);
         
         //add delete single item link
         var deleteLink = document.createElement('a');
@@ -219,7 +219,7 @@ window.addEventListener("DOMContentLoaded", function(){
         var deleteText = "Delete Information";
         deleteLink.addEventListener("click", deleteItem);
         deleteLink.html = deleteText;
-        linksLi.appendChild(deleteLink);
+        linksLi.appendTo(deleteLink);
     }
         
          function editItem(){
@@ -354,7 +354,7 @@ window.addEventListener("DOMContentLoaded", function(){
             for(var i=0, j=messageAry.length; i < j; i++){
                 var txt = document.createElement('li');
                 txt.html = messageAry[i];
-                errMsg.appendChild(txt);
+                errMsg.appendTo(txt);
             }
             e.preventDefault();
             return false;
