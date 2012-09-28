@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", function(){
             var makeOption = document.createElement('option');
             var optText = ageGroup[i];
             makeOption.setAttribute("value", optText);
-            makeOption.innerHTML = optText;
+            makeOption.html = optText;
             makeSelect.appendChild(makeOption);
         }
         selectLi.appendChild(makeSelect);
@@ -181,7 +181,7 @@ window.addEventListener("DOMContentLoaded", function(){
                 var makeSubli = document.createElement('li');
                 makeSubList.appendChild(makeSubli);
                 var optSubText = obj[n][0]+" "+obj[n][1];
-                makeSubli.innerHTML = optSubText;
+                makeSubli.html = optSubText;
                 makeSubList.appendChild(linksLi);
             }
             makeItemLinks(localStorage.key(i), linksLi); //Creat our edit and delete buttons link for our item in local storage.
@@ -205,7 +205,7 @@ window.addEventListener("DOMContentLoaded", function(){
         editLink.key = key;
         var editText = "Edit Information";
         editLink.addEventListener("click", editItem);
-        editLink.innerHTML = editText;
+        editLink.html = editText;
         linksLi.appendChild(editLink);
         
         //add a line break
@@ -218,7 +218,7 @@ window.addEventListener("DOMContentLoaded", function(){
         deleteLink.key = key;
         var deleteText = "Delete Information";
         deleteLink.addEventListener("click", deleteItem);
-        deleteLink.innerHTML = deleteText;
+        deleteLink.html = deleteText;
         linksLi.appendChild(deleteLink);
     }
         
@@ -305,7 +305,7 @@ window.addEventListener("DOMContentLoaded", function(){
         var getSubject = $('subject');
         
         //Reset error Messages
-        errMsg.innerHTML = "";
+        errMsg.html = "";
         getLists.style.border = "1px solid black";
         getAuthor.style.border = "1px solid black";
         getTitle.style.border = "1px solid black";
@@ -353,7 +353,7 @@ window.addEventListener("DOMContentLoaded", function(){
         if(messageAry.length >= 1){
             for(var i=0, j=messageAry.length; i < j; i++){
                 var txt = document.createElement('li');
-                txt.innerHTML = messageAry[i];
+                txt.html = messageAry[i];
                 errMsg.appendChild(txt);
             }
             e.preventDefault();
