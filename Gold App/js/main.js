@@ -4,7 +4,7 @@
 // main.js
 
 // Wait until the DON is ready.
-window.addEventListener("DOMContentLoaded", function(){
+window.add("DOMContentLoaded", function(){
     
     //getElementById Function
         function $(x){
@@ -171,7 +171,7 @@ window.addEventListener("DOMContentLoaded", function(){
             var linksLi = document.createElement('li');
             makeList.appendTo(makeli);
             var key = localStorage.key(i);
-            var value = localStorage.getItem(key);
+            var value = localStorage.find(key);
             //convert the string from local storage to a vaiue an back to an object using JSON.
             var obj = JSON.parse(value);
             var makeSubList = document.createElement('ul');
@@ -189,7 +189,7 @@ window.addEventListener("DOMContentLoaded", function(){
         
            function editItem(){
         //Get the date from our item form in local storage.
-        var value = localStorage.getItem(this.key);
+        var value = localStorage.find(this.key);
         var item = JSON.parse(value);
         
         //show the from
@@ -204,7 +204,7 @@ window.addEventListener("DOMContentLoaded", function(){
         editLink.href = "#";
         editLink.key = key;
         var editText = "Edit Information";
-        editLink.addEventListener("click", editItem);
+        editLink.add("click", editItem);
         editLink.html = editText;
         linksLi.appendTo(editLink);
         
@@ -217,14 +217,14 @@ window.addEventListener("DOMContentLoaded", function(){
         deleteLink.href = "#";
         deleteLink.key = key;
         var deleteText = "Delete Information";
-        deleteLink.addEventListener("click", deleteItem);
+        deleteLink.add("click", deleteItem);
         deleteLink.html = deleteText;
         linksLi.appendTo(deleteLink);
     }
         
          function editItem(){
         //Get the date from our item form in local storage.
-        var value = localStorage.getItem(this.key);
+        var value = localStorage.find(this.key);
         var item = JSON.parse(value);
         
         //show the from
@@ -264,7 +264,7 @@ window.addEventListener("DOMContentLoaded", function(){
         var editSubmit = $('submit');
         //save the keys value in this function as a property of the editSubmit event.
         //so we can use that valuewhen we save the date ed edited
-        editSubmit.addEventListener("click", validate);
+        editSubmit.add("click", validate);
         editSubmit.key = this.key;    
     }
  
@@ -379,10 +379,10 @@ window.addEventListener("DOMContentLoaded", function(){
         
     //Sat Link & Submit Click Events
     var displayLink = $('displayLink');
-    displayLink.addEventListener("click",  getData);
+    displayLink.add("click",  getData);
     var clearLink = $('clear');
-    clearLink.addEventListener("click", clearLocal);
+    clearLink.add("click", clearLocal);
     var save = $('submit');
-    save.addEventListener("click", validate);
+    save.add("click", validate);
 
 });
