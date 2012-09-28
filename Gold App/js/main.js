@@ -50,17 +50,17 @@ window.addEventListener("DOMContentLoaded", function(){
     function toggleControls(n){
         switch(n){
             case "on":
-                $('bookForm').style.display = "none";
-                $('clear').style.display = "inline";
-                $('displayLink').style.display = "none";
-                $('addNew').style.display = "inline";
+                $('bookForm').css.display = "none";
+                $('clear').css.display = "inline";
+                $('displayLink').css.display = "none";
+                $('addNew').css.display = "inline";
                 break;
             case "off":
-                $('bookForm').style.display = "block";
-                $('clear').style.display = "inline";
-                $('displayLink').style.display = "inline";
-                $('addNew').style.display = "none";
-                $('items').style.display = "none";
+                $('bookForm').css.display = "block";
+                $('clear').css.display = "inline";
+                $('displayLink').css.display = "inline";
+                $('addNew').css.display = "none";
+                $('items').css.display = "none";
                 break;
             default:
                 return false;
@@ -165,7 +165,7 @@ window.addEventListener("DOMContentLoaded", function(){
         var makeList = document.createElement('ul');
         makeDiv.appendTo(makeList);
         document.body.appendTo(makeDiv);
-        $('items').style.display = "block";
+        $('items').css.display = "block";
         for(var i=0, len=localStorage.length; i<len;i++){
             var makeli = document.createElement('li');
             var linksLi = document.createElement('li');
@@ -258,7 +258,7 @@ window.addEventListener("DOMContentLoaded", function(){
         $('comments').value = item.comments[1];
         
         //Remove the initial listener form in input save cotact button.
-        save.removeEventListener("click", storeData);
+        save.remove("click", storeData);
         //change the submit button value to edit button.
         $('submit').value = "Edit Information";
         var editSubmit = $('submit');
@@ -306,46 +306,46 @@ window.addEventListener("DOMContentLoaded", function(){
         
         //Reset error Messages
         errMsg.html = "";
-        getLists.style.border = "1px solid black";
-        getAuthor.style.border = "1px solid black";
-        getTitle.style.border = "1px solid black";
-        getAge.style.border = "1px solid black";
-        getSubject.style.border = "1px solid black";
+        getLists.css.border = "1px solid black";
+        getAuthor.css.border = "1px solid black";
+        getTitle.css.border = "1px solid black";
+        getAge.css.border = "1px solid black";
+        getSubject.css.border = "1px solid black";
         
         //get error messages
         var messageAry = [];
         //group validation
         if(getLists.value === "--Choose A List--"){
             var listsError = "Please choose a list.";
-            getLists.style.border = "1px solid red";
+            getLists.css.border = "1px solid red";
             messageAry.push(listsError);
         }
         
         // Author Name Validation
         if(getAuthor.value === ""){
             var authorError = "Please Enter A Author Name.";
-            getAuthor.style.border = "1px solid red";
+            getAuthor.css.border = "1px solid red";
             messageAry.push(authorError);
         }
         
         // Title Validation
         if(getTitle.value === ""){
             var titleError = "Please Enter A Title.";
-            getTitle.style.border = "1px solid red";
+            getTitle.css.border = "1px solid red";
             messageAry.push(titleError);
         }
         
         //Age validation
         if(getAge.value === "--Select Age Group--"){
             var ageError = "Select A Age Group.";
-            getAge.style.border = "1px solid red";
+            getAge.css.border = "1px solid red";
             messageAry.push(ageError);
         }
         
         //Subject Validation
         if(getSubject.value === ""){
             var subjectError = "Choose A Subject.";
-            getSubject.style.border = "1px solid red";
+            getSubject.css.border = "1px solid red";
             messageAry.push(subjectError);
         }
         
