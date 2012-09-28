@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", function(){
         for(var i=0, j=ageGroup.length; i<j; i++){
             var makeOption = document.createElement('option');
             var optText = ageGroup[i];
-            makeOption.setAttribute("value", optText);
+            makeOption.attr("value", optText);
             makeOption.html = optText;
             makeSelect.appendTo(makeOption);
         }
@@ -95,7 +95,7 @@ window.addEventListener("DOMContentLoaded", function(){
         var imageLi = document.createElement('li');
         makeSubList.appendTo(imageLi);
         var newImg = document.createElement('img');
-        var setSrc = newImg.setAttribute("src", "images/"+ catName + ".png");
+        var setSrc = newImg.attr("src", "images/"+ catName + ".png");
         imageLi.appendTo(newImg);
     }
     
@@ -161,7 +161,7 @@ window.addEventListener("DOMContentLoaded", function(){
         }
         //Write Date from local storage to the browser.
         var makeDiv = document.createElement('div');
-        makeDiv.setAttribute("id", "items");
+        makeDiv.attr("id", "items");
         var makeList = document.createElement('ul');
         makeDiv.appendTo(makeList);
         document.body.appendTo(makeDiv);
@@ -287,7 +287,7 @@ window.addEventListener("DOMContentLoaded", function(){
         if(localStorage.length === 0){
             alert("There is no data to clear.");
         }else{
-            localStorage.clear();
+            localStorage.empty();
             alert("All data deleted!");
             window.location.reload();
             return false;
