@@ -1,7 +1,7 @@
 $(function(){
 	
 	$.ajax({
-		url: 'xhr/list.php',
+		url: 'xhr/list.json',
 		type: 'GET',
 		dataType: 'json',
 		success: function(response){
