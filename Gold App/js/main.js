@@ -50,7 +50,7 @@ window.add("DOMContentLoaded", function(){
     function toggleControls(n){
         switch(n){
             case "on":
-                g('bookForm').css.display = "none";
+                $('#bookForm').css.display = "none";
                 g('clear').css.display = "inline";
                 g('displayLink').css.display = "none";
                 g('addNew').css.display = "inline";
@@ -72,8 +72,9 @@ window.add("DOMContentLoaded", function(){
         //Set the id to the existing key so it will save over the date.
         //The key is the sme key to be passed along the from the editsubmit event handler
         // The validate function and the pass into the storData function.
+        var id;
         if(!key){
-            var id                             = Math.floor(Math.random()*100000001);
+             id = Math.floor(Math.random()*100000001);
         }else{
              id = key;
         }
@@ -81,7 +82,7 @@ window.add("DOMContentLoaded", function(){
         //Object properties contain array with the form label and iput value.
         getSelectedcheckbox();
             var item                      = {};
-            item.lists                    = ["Lists:",        g('lists').value];
+            item.lists                    = ["Lists:",        $('#lists').val()];
             item.author                   = ["Author:",       g('author').value];
             item.date1                    = ["Date1",         g('date1').value];
             item.website                  = ["Website",       g('website').value];
