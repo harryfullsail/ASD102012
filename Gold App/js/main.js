@@ -83,22 +83,22 @@ window.on("DOMContentLoaded", function(){
         getSelectedcheckbox();
             var item                      = {};
             item.lists                    = ["Lists:",        $('#lists').val()];
-            item.author                   = ["Author:",       g('author').value];
-            item.date1                    = ["Date1",         g('date1').value];
-            item.website                  = ["Website",       g('website').value];
-            item.birth                    = ["Birth",         g('birth').value];
-            item.biography                = ["Biography",     g('biography').value];
-            item.books                    = ["Books",         g('books').value];
-            item.title                    = ["Title:",        g('title').value];
-            item.author1                  = ["Author1",       g('author1').value];
-            item.date2                    = ["Date2",         g('date2').value];
-            item.description              = ["Description",   g('description').value];
-            item.date                     = ["Date",          g('date').value];
+            item.author                   = ["Author:",       g('author').val()];
+            item.date1                    = ["Date1",         g('date1').val()];
+            item.website                  = ["Website",       g('website').val()];
+            item.birth                    = ["Birth",         g('birth').val()];
+            item.biography                = ["Biography",     g('biography').val()];
+            item.books                    = ["Books",         g('books').val()];
+            item.title                    = ["Title:",        g('title').val()];
+            item.author1                  = ["Author1",       g('author1').val()];
+            item.date2                    = ["Date2",         g('date2').val()];
+            item.description              = ["Description",   g('description').val()];
+            item.date                     = ["Date",          g('date').val()];
             item.genre                    = ["Genre:", genreValue];
-            item.age                      = ["Age:",          g('age').value];
-            item.subject                  = ["Subject:",      g('subject').value];
-            item.rate                     = ["Rate",          g('rate').value];
-            item.comments                 = ["Comments",      g('comments').value];
+            item.age                      = ["Age:",          g('age').val()];
+            item.subject                  = ["Subject:",      g('subject').val()];
+            item.rate                     = ["Rate",          g('rate').val()];
+            item.comments                 = ["Comments",      g('comments').val()];
         //Save data into Local Storage: Use Stringify to convert our object to a string.
         localStorage.setItem(id, JSON.stringify(item));
         alert("Save");
@@ -143,35 +143,35 @@ window.on("DOMContentLoaded", function(){
         //get error messages
         var messageAry = [];
         //group validation
-        if(getLists.value === "--Choose A List--"){
+        if(getLists.val() === "--Choose A List--"){
             var listsError = "Please choose a list.";
             getLists.css.border = "1px solid red";
             messageAry.push(listsError);
         }
         
         // Author Name Validation
-        if(getAuthor.value === ""){
+        if(getAuthor.val() === ""){
             var authorError = "Please Enter A Author Name.";
             getAuthor.css.border = "1px solid red";
             messageAry.push(authorError);
         }
         
         // Title Validation
-        if(getTitle.value === ""){
+        if(getTitle.val() === ""){
             var titleError = "Please Enter A Title.";
             getTitle.css.border = "1px solid red";
             messageAry.push(titleError);
         }
         
         //Age validation
-        if(getAge.value === "--Select Age Group--"){
+        if(getAge.val() === "--Select Age Group--"){
             var ageError = "Select A Age Group.";
             getAge.css.border = "1px solid red";
             messageAry.push(ageError);
         }
         
         //Subject Validation
-        if(getSubject.value === ""){
+        if(getSubject.val() === ""){
             var subjectError = "Choose A Subject.";
             getSubject.css.border = "1px solid red";
             messageAry.push(subjectError);
