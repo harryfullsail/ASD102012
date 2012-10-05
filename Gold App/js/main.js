@@ -23,10 +23,10 @@ window.add("DOMContentLoaded", function(){
     function makeCats(){
         var formTag = document.getElementsByTagName("form"), // this is a array of all the from tags.
             selectLi = g('select'),
-            makeSelect = document.createElement('select');
+            makeSelect = document.appendTo('select');
             makeSelect.attr("id", "age");
         for(var i=0, j=ageGroup.length; i<j; i++){
-            var makeOption = document.createElement('option');
+            var makeOption = document.appendTo('option');
             var optText = ageGroup[i];
             makeOption.attr("value", optText);
             makeOption.html = optText;
@@ -107,9 +107,9 @@ window.add("DOMContentLoaded", function(){
     
        //Get right image to the category.
     function getImage(catName, makeSubList){
-        var imageLi = document.createElement('li');
+        var imageLi = document.appendTo('li');
         makeSubList.append(imageLi);
-        var newImg = document.createElement('img');
+        var newImg = document.appendTo('img');
         var setSrc = newImg.attr("src", "images/"+ catName + ".png");
         imageLi.append(newImg);
     }
@@ -180,7 +180,7 @@ window.add("DOMContentLoaded", function(){
         //if there were errors display them on the screen.
         if(messageAry.length >= 1){
             for(var i=0, j=messageAry.length; i < j; i++){
-                var txt = document.createElement('li');
+                var txt = document.appendTo('li');
                 txt.html = messageAry[i];
                 errMsg.append(txt);
             }
@@ -257,7 +257,7 @@ var save = g('submit');
     //Creat a edit and delete links for our stored items when displayed.
     function makeItemLinks(key, linksLi){
         //add edit singe item link
-        var editLink = document.createElement('a');
+        var editLink = document.appendTo('a');
         editLink.href = "#";
         editLink.key = key;
         var editText = "Edit Information";
@@ -266,11 +266,11 @@ var save = g('submit');
         linksLi.append(editLink);
         
         //add a line break
-        var breakTag = document.createElement('br');
+        var breakTag = document.appendTo('br');
         linksLi.append(breakTag);
         
         //add delete single item link
-        var deleteLink = document.createElement('a');
+        var deleteLink = document.appendTo('a');
         deleteLink.href = "#";
         deleteLink.key = key;
         var deleteText = "Delete Information";
@@ -286,25 +286,25 @@ var save = g('submit');
             autoFillData();
         }
         //Write Date from local storage to the browser.
-        var makeDiv = document.createElement('div');
+        var makeDiv = document.appendTo('div');
         makeDiv.attr("id", "items");
-        var makeList = document.createElement('ul');
+        var makeList = document.appendTo('ul');
         makeDiv.append(makeList);
         document.body.append(makeDiv);
         g('items').css.display = "block";
         for(var i=0, len=localStorage.length; i<len;i++){
-            var makeli = document.createElement('li');
-            var linksLi = document.createElement('li');
+            var makeli = document.appendTo('li');
+            var linksLi = document.appendTo('li');
             makeList.append(makeli);
             var key = localStorage.key(i);
             var value = localStorage.find(key);
             //convert the string from local storage to a vaiue an back to an object using JSON.
             var obj = JSON.parse(value);
-            var makeSubList = document.createElement('ul');
+            var makeSubList = document.appendTo('ul');
             makeli.append(makeSubList);
             getImage(obj.age[1], makeSubList);
             for(var n in obj){
-                var makeSubli = document.createElement('li');
+                var makeSubli = document.appendTo('li');
                 makeSubList.append(makeSubli);
                 var optSubText = obj[n][0]+" "+obj[n][1];
                 makeSubli.html = optSubText;
