@@ -4,7 +4,7 @@
 // main.js
 
 // Wait until the DON is ready.
-window.add("DOMContentLoaded", function(){
+window.on("DOMContentLoaded", function(){
     
     //getElementById Function
         function g(x){
@@ -194,7 +194,7 @@ window.add("DOMContentLoaded", function(){
     
 
 var save = g('submit');
-    save.add("click", validate);
+    save.on("click", validate);
     
      function editItem(){
         //Get the date from our item form in local storage.
@@ -232,13 +232,13 @@ var save = g('submit');
         g('comments').value = item.comments[1];
         
         //Remove the initial listener form in input save cotact button.
-        save.remove("click", storeData);
+        save.off("click", storeData);
         //change the submit button value to edit button.
         g('submit').value = "Edit Information";
         var editSubmit = g('submit');
         //save the keys value in this function as a property of the editSubmit event.
         //so we can use that valuewhen we save the date ed edited
-        editSubmit.add("click", validate);
+        editSubmit.on("click", validate);
         editSubmit.key = this.key;    
     }
     
@@ -261,7 +261,7 @@ var save = g('submit');
         editLink.href = "#";
         editLink.key = key;
         var editText = "Edit Information";
-        editLink.add("click", editItem);
+        editLink.on("click", editItem);
         editLink.html = editText;
         linksLi.append(editLink);
         
@@ -274,7 +274,7 @@ var save = g('submit');
         deleteLink.href = "#";
         deleteLink.key = key;
         var deleteText = "Delete Information";
-        deleteLink.add("click", deleteItem);
+        deleteLink.on("click", deleteItem);
         deleteLink.html = deleteText;
         linksLi.append(deleteLink);
     }
@@ -327,9 +327,9 @@ var save = g('submit');
     
     	//Sat Link & Submit Click Events
     var displayLink = g('displayLink');
-    displayLink.add("click",  getData);
+    displayLink.on("click",  getData);
     var clearLink = g('clear');
-    clearLink.add("click", clearLocal);
+    clearLink.on("click", clearLocal);
        
        
 });
