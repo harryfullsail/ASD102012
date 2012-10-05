@@ -44,6 +44,36 @@
 		"rate":					"Rate: 1",
 		"comments":				73260
 		
+		},
+		{
+		"lists": 				"Lists: Book I will read",
+		"dateRead":				"Date Read:",
+		"author": 				"Author: Rick Riordan",
+		"title":  				"Title: The Mark of Athena",
+		"publicationDate":		"Publication Date: 10/2/2012",
+		"bookSeries":			"Book Series: Heroes of Olympus series 3",
+		"genre":				"Genre: Fiction",
+		"age":					"Age: juenile",
+		"subject":				"Subject: Science Fiction & Fantasy",
+		"descriptionOfBook":	"Description of Book:",
+		"rate":					"Rate: ",
+		"comments":				73211
+		
+		},
+		{
+		"lists": 				"Lists: Book I will read",
+		"dateRead":				"Date Read:",
+		"author": 				"Author: Bill O'Reilly Martin Dugard",
+		"title":  				"Title: Killing Kennedy: The End of Gamelot",
+		"publicationDate":		"Publication Date: 10/2/2012",
+		"bookSeries":			"Book Series:",
+		"genre":				"Genre: Nofiction",
+		"age":					"Age: Adult",
+		"subject":				"Subject:",
+		"descriptionOfBook":	"Description of Book:",
+		"rate":					"Rate: ",
+		"comments":				72222
+		
 			}
 		]
 }
