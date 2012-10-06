@@ -35,7 +35,7 @@ $(function(){
 /*
 $(function(){
 
-	//$('#json').empty();
+	//$('#CSV').empty();
 	$.ajax({
 		url: 'xhr/list.csv',
 		type: 'GET',
@@ -70,7 +70,6 @@ $(function(){
 	
 });
 */
-
 
 //xml
 /*
