@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item>
+		<lists>Lists: Books Read</lists>
+		<dateRead>Date Read: 4/24/2012</dateRead>
+		<author>Author: Brandon Sanderson</author>
+		<title>Title: Warbreaker</title>
+		<publicationDate>Publication Date: 3/30/2010</publicationDate>
+		<bookSeries>Book Series:</bookSeries>
+		<genre>Fiction</genre>
+		<age>Adult</age>
+		<subject>Subject: Science Fiction & Fantasy</subject>
+		<descriptionOfBook>Description of Book:</descriptionOfBook>
+		<rate>Rate: 8</rate>
+		<comments>69788</comments>
+	</item>
+</items>
+
+<items>
+	<item>
+		<lists>Lists: Books Read</lists>
+		<dateRead>Date Read: 6/10/2012</dateRead>
+		<author>Author: Jonathan Stroud</author>
+		<title>Title: The Ring of Solomon</title>
+		<publicationDate>Publication Date: 1/24/2010</publicationDate>
+		<bookSeries>Book Series:</bookSeries>
+		<genre>Fiction</genre>
+		<age>Adult</age>
+		<subject>Subject: Science Fiction & Fantasy</subject>
+		<descriptionOfBook>Description of Book:</descriptionOfBook>
+		<rate>Rate: 10</rate>
+		<comments>Comments: 72274</comments>
+	</item>
+</items>
+
+<items>
+	<item>
+		<lists>Lists: book I will read</lists>
+		<dateRead>Date Read:</dateRead>
+		<author>Author: Aliso Goodman</author>
+		<title>Title: Eona</title>
+		<publicationDate>Publication Date: 4/19/2010</publicationDate>
+		<bookSeries>Book Series:</bookSeries>
+		<genre>Fiction</genre>
+		<age>Adult</age>
+		<subject>Subject: Science Fiction & Fantasy</subject>
+		<descriptionOfBook>Description of Book:</descriptionOfBook>
+		<rate>Rate: 1</rate>
+		<comments>Comments: 73260</comments>
+	</item>
+</items>
+
+<items>
+	<item>
+		<lists>Lists: book I will read</lists>
+		<dateRead>Date Read:</dateRead>
+		<author>Author: Rick Riordan</author>
+		<title>Title: The Mark of Athena</title>
+		<publicationDate>Publication Date: 1o/2/2012</publicationDate>
+		<bookSeries>Book Series: Heroes of Olympus series 3</bookSeries>
+		<genre>Fiction</genre>
+		<age>Age: Juvenile</age>
+		<subject>Subject: Science Fiction & Fantasy</subject>
+		<descriptionOfBook>Description of Book:</descriptionOfBook>
+		<rate>Rate:</rate>
+		<comments>Comments: 73211</comments>
+	</item>
+</items>
+
+<items>
+	<item>
+		<lists>Lists: book I will read</lists>
+		<dateRead>Date Read:</dateRead>
+		<author>Author: Bill O'Reilly Martin Dugard</author>
+		<title>Title: Killing Kennedy: the End of Gamelot</title>
+		<publicationDate>Publication Date: 10/2/2012</publicationDate>
+		<bookSeries>Book Series:</bookSeries>
+		<genre>Nofiction</genre>
+		<age>Age: adult</age>
+		<subject>Subject:</subject>
+		<descriptionOfBook>Description of Book:</descriptionOfBook>
+		<rate>Rate:</rate>
+		<comments>Comments: 72222</comments>
+	</item>
+</items>
