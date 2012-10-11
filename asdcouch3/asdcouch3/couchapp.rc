@@ -1,0 +1,11 @@
+{
+  "env": {
+    "local": {
+      "db": "http://127.0.0.1:5984/asdbookapp102012"
+ 
+ 	} 
+    "cloudat": {
+      "db": "https://harrydlee:duncan884@harrydlee.cloudant.com/asdbookapp102012"
+    }
+  }
+}
